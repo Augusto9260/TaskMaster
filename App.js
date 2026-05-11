@@ -1,11 +1,12 @@
 import React, { useState, useEffect }  from "react";
-import { View, Text, StyleSheet, StatusBar, FlatList, TextInput, TouchableOpacity, Keyboard, Image, Platform, Alert, Linking} from "react-native";
+import { View, Text, StyleSheet, StatusBar, FlatList, TextInput, TouchableOpacity, Keyboard, Image, Platform, Alert, Linking, useWindowDimensions} from "react-native";
 import AsyncStorage  from "@react-native-async-storage/async-storage";
 import {version as APP_VERSION} from "./package.json";
 
 export default function App(){
   const [tarefas, setTarefas] = useState('');
   const [listaTarefas, setListaTarefas] = useState([]);
+  const {height} = useWindowDimensions();
 
   async function checkUpdate(){
     try {
@@ -105,7 +106,7 @@ export default function App(){
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={"#000000"} barStyle={"light-content"} />
-      <View style={styles.h1}>
+      <View style={[styles.h1, {marginTop: height < 800 ? 0 : 30}]}>
         <Text style={styles.titulo}>TaskMaster</Text>
       </View>
       <View style={styles.viewInput}>
@@ -136,7 +137,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#007575',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+  h1:{
+    //marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   titulo: {
     textAlign: 'center',
