@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from "react";
-import { View, Text, StyleSheet, StatusBar, FlatList, TextInput, TouchableOpacity, Keyboard, Image, Platform, Alert, Linking, useWindowDimensions} from "react-native";
+import { View, Text, StyleSheet, StatusBar, FlatList, TextInput, TouchableOpacity, Keyboard, Image, Alert, Linking, useWindowDimensions} from "react-native";
 import AsyncStorage  from "@react-native-async-storage/async-storage";
 import {version as APP_VERSION} from "./package.json";
 
@@ -7,7 +7,7 @@ export default function App(){
   const [tarefas, setTarefas] = useState('');
   const [listaTarefas, setListaTarefas] = useState([]);
   const {height} = useWindowDimensions();
-
+  // Verifica atualização
   async function checkUpdate(){
     try {
       const response = await fetch(`https://api.github.com/repos/Augusto9260/TaskMaster/releases/latest`);
@@ -31,12 +31,12 @@ export default function App(){
       console.log("Não foi possivel verificar atualização", error);
     }
   }
-  //Carregar dados
+  // Chama essas funções ao iniciar o app
   useEffect(() => {
     carregarDados();
     checkUpdate();
   },[])
-
+  //Carregar dados ao iniciar o app
   async function carregarDados(){
     try {
       const dados = await AsyncStorage.getItem('@taskmaster_lista');
@@ -106,7 +106,7 @@ export default function App(){
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={"#000000"} barStyle={"light-content"} />
-      <View style={[styles.h1, {marginTop: height < 800 ? 0 : 30}]}>
+      <View style={[styles.h1, {marginTop: height < 700 ? 0 : 30}]}>
         <Text style={styles.titulo}>TaskMaster</Text>
       </View>
       <View style={styles.viewInput}>
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007575',
   },
   h1:{
-    //marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    
   },
   titulo: {
     textAlign: 'center',
