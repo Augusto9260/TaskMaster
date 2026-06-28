@@ -2,7 +2,7 @@
 
 O **TaskMaster** é um aplicativo móvel de gerenciamento de tarefas (To-Do List) simples, rápido e eficiente. Desenvolvido em **React Native**, o app permite que o usuário crie, conclua e exclua tarefas locais, contando com persistência de dados em disco e verificação automática de atualizações via API do GitHub.
 
-👉 **[Clique aqui para ir direto para a página de Downloads](https://github.com/Augusto9260/TaskMaster/releases/latest)**
+👉 **[Clique aqui para ir direto para a página de Downloads](https://github.com/Augusto9260/TaskMaster/releases/tag/v1.2.2)**
 
 ---
 
@@ -10,7 +10,7 @@ O **TaskMaster** é um aplicativo móvel de gerenciamento de tarefas (To-Do List
 
 Para instalar o **TaskMaster** diretamente no seu dispositivo Android, siga os passos abaixo:
 
-1. **Acessar as Releases:** Vá até a aba [Releases](https://github.com/Augusto9260/TaskMaster/releases) do repositório ou clique no botão de download acima.
+1. **Acessar as Releases:** Vá até a aba [Releases](https://github.com/Augusto9260/TaskMaster/releases/tag/v1.2.2) do repositório ou clique no botão de download acima.
 2. **Baixar o arquivo:** Na versão mais recente (ex: `v1.2.2`), clique no arquivo **`TaskMaster.apk`** dentro da seção *Assets* para iniciar o download.
 3. **Autorizar a Instalação:** Caso o seu navegador ou gerenciador de arquivos peça permissão para "Instalar aplicativos de fontes desconhecidas", conceda a permissão (esse é um procedimento padrão do Android para aplicativos que não estão na Google Play Store).
 4. **Pronto!** Abra o aplicativo e comece a gerenciar suas tarefas.
