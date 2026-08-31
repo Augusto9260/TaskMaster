@@ -82,7 +82,7 @@ function TaskMaster(){
             tarefas: tarefas,
             concluida: false,
           };
-          setListaTarefas([...listaTarefas, novaLista])
+          setListaTarefas([novaLista,...listaTarefas]);
           setTarefas('');
           Keyboard.dismiss();
         }
@@ -111,7 +111,8 @@ function TaskMaster(){
         </View>
         <View style={styles.viewInput}>
           <TextInput value={tarefas} style={styles.input}
-          onChangeText={setTarefas} />
+          onChangeText={setTarefas}
+          onSubmitEditing={addTarefas} />
           <TouchableOpacity style={styles.botao} 
           onPress={addTarefas} >
             <Text style={styles.botaoAdd}>+</Text>
