@@ -6,7 +6,7 @@ O TaskMaster é uma aplicação móvel simples e eficiente para gestão de taref
 
 | Ecrã Principal | Detalhes da Lista |
 | :---: | :---: |
-| <img src="./screenshots/home.png" width="250" /> | <img src="./screenshots/list.png" width="250" /> |
+| <img src="./screenshots/Screenshot_20261107-151151.png" width="250" /> | <img src="./screenshots/Screenshot_20261107-151214.png" width="250" /> |
 
 ## Tecnologias Utilizadas
 
